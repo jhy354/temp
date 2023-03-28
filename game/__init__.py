@@ -1,2 +1,2 @@
 from .game import GameApp
-from
+from .scenes import StartMenu

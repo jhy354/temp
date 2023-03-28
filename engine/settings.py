@@ -2,7 +2,7 @@
 AUTHOR_NAME = "jhy354(Romulus)"
 GITHUB_URL = r"https://github.com/jhy354/temp"
 AUTHOR_URL = r"https://github.com/jhy354/"
-SCR_SIZE = (640, 480)
+SCR_SIZE = (960, 720)
 FPS = 60
 
 VERSION = "e0.0.1.0328"

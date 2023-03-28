@@ -43,3 +43,36 @@ class GameApp:
         print(scenes)
 
         return scenes
+
+    def run(self):
+
+        # * MAIN LOOP * #
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
+
+            dt = self.clock.tick(FPS) / 1000
+            self.check_scenes(dt)
+            self.switch_scenes()
+            pygame.display.update()
+
+    def check_scenes(self, dt):
+        """
+        更新场景
+        """
+
+        for scene in self.scenes.values():
+            if scene.active:
+                scene.run(dt)
+
+    def switch_scenes(self):
+        """
+        场景转换的条件及控制
+        """
+
+        if self.scenes["start_menu"].quit_button.clicked:
+            pygame.quit()
+            sys.exit()
+
